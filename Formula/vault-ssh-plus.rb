@@ -2,24 +2,24 @@
 class VaultSshPlus < Formula
   desc "Automatically use HashiCorp Vault SSH Client Key Signing with ssh(1)"
   homepage "https://just.breathe.io/project/vault-ssh-plus/"
-  version "0.2.0"
+  version "0.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.2.0/vault-ssh-plus_0.2.0_darwin_amd64.zip"
-    sha256 "23ef1b79dbd4f62fbef2fd890ea739632d863a07b4ca7bba7ee54b5fd04e7e1e"
+    url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.3.0/vault-ssh-plus_0.3.0_darwin_amd64.zip"
+    sha256 "bd466fb788816c0895cbdd1f24d9822c44cd6bf61e265327634e4ee421d38bcb"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.2.0/vault-ssh-plus_0.2.0_linux_amd64.zip"
-      sha256 "e862859be966a78ab0d8515ef36b01ae4104d50d59d0315a7df1411667111340"
+      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.3.0/vault-ssh-plus_0.3.0_linux_amd64.zip"
+      sha256 "ed74f4f47629fef7d1ef2f40c0466b419357f05de8402284e020a931e87237eb"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.2.0/vault-ssh-plus_0.2.0_linux_arm64.zip"
-        sha256 "5e656805232ef6d48b48104255435a6629f75e0ad9dcd69149d4075727807778"
+        url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.3.0/vault-ssh-plus_0.3.0_linux_arm64.zip"
+        sha256 "d26c0b8c9d16d6e8a39bdf4a0e95ae91ab3cc95f797925c74d52fe832090e711"
       else
-        url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.2.0/vault-ssh-plus_0.2.0_linux_arm.zip"
-        sha256 "d3536fb33bbc39513f799ad36de2b02b462af27278819c5b10a2f0acf2cb9b3c"
+        url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.3.0/vault-ssh-plus_0.3.0_linux_arm.zip"
+        sha256 "a67dffb5512e6f31a899d6afa046fdafcd22bb948d06e512ec7bfe88796d6b10"
       end
     end
   end
@@ -28,5 +28,9 @@ class VaultSshPlus < Formula
 
   def install
     bin.install "vssh"
+  end
+
+  test do
+    system "#{bin}/vssh --version"
   end
 end
