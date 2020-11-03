@@ -2,24 +2,24 @@
 class VaultSshPlus < Formula
   desc "Automatically use HashiCorp Vault SSH Client Key Signing with ssh(1)"
   homepage "https://just.breathe.io/project/vault-ssh-plus/"
-  version "0.3.1"
+  version "0.4.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.3.1/vault-ssh-plus_0.3.1_darwin_amd64.zip"
-    sha256 "a5c2167d9ba579bdf1089e464da14607b6c1a9fea6760e674910deff5ebfb380"
+    url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.4.0/vault-ssh-plus_0.4.0_darwin_amd64.zip"
+    sha256 "da11792663db3fd334d8aa1ed545b97e9f0e142586a91ba7aa15df09c203a6b5"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.3.1/vault-ssh-plus_0.3.1_linux_amd64.zip"
-      sha256 "f7c3076e1c3d9c611d5d3bb491c4908f9c1b26a6bc579cf54534f15bed927ea2"
+      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.4.0/vault-ssh-plus_0.4.0_linux_amd64.zip"
+      sha256 "467983a23fbb0e08201e2b44a565ed28bb48ba3ee117263364e33998ac1bee2f"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.3.1/vault-ssh-plus_0.3.1_linux_arm64.zip"
-        sha256 "09f6ce7034dfcbfd4e5bd4beba0d4ea202b755ac89864e7744eee190df23c63f"
+        url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.4.0/vault-ssh-plus_0.4.0_linux_arm64.zip"
+        sha256 "ec6d4019a9f8564d657eb18bb4f809e202d22d8e983ff6f096763ad00be8b5ee"
       else
-        url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.3.1/vault-ssh-plus_0.3.1_linux_arm.zip"
-        sha256 "312edaa1b89bab25dae6e99220777b6cb9df4bd0aa14e0f5a48fa3abd16b8a19"
+        url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.4.0/vault-ssh-plus_0.4.0_linux_arm.zip"
+        sha256 "ef342dddf08d369557e66d0e4b72053fe69576f819f2da7345cc312aef6b888c"
       end
     end
   end
