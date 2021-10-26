@@ -3,7 +3,6 @@ class VaultSshPlus < Formula
   desc "Automatically use HashiCorp Vault SSH Client Key Signing with ssh(1)"
   homepage "https://just.breathe.io/project/vault-ssh-plus/"
   version "0.4.0"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.4.0/vault-ssh-plus_0.4.0_darwin_amd64.zip"
