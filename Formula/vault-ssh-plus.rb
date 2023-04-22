@@ -5,22 +5,22 @@
 class VaultSshPlus < Formula
   desc "Automatically use HashiCorp Vault SSH Client Key Signing with ssh(1)"
   homepage "https://just.breathe.io/project/vault-ssh-plus/"
-  version "0.5.2"
+  version "0.5.3"
 
   depends_on "vault"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.2/vault-ssh-plus_0.5.2_darwin_amd64.zip"
-      sha256 "79d86fbd1fc23947275d3fd1fac4d986912f1ce09866130f928df6262945cf79"
+      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.3/vault-ssh-plus_0.5.3_darwin_amd64.zip"
+      sha256 "22b107ddf075988f54bb9532187b89c1dbac4559eef6803648f0776e2b61c289"
 
       def install
         bin.install "vssh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.2/vault-ssh-plus_0.5.2_darwin_arm64.zip"
-      sha256 "f12b6aa0eaae4ff81d3a323ccf3662eb15984b7614f0f730289ed05d8ad28bc0"
+      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.3/vault-ssh-plus_0.5.3_darwin_arm64.zip"
+      sha256 "eeb0dd3d95d8779e9b5b259cb77386e14b5e26d188aabb44bf964694505ab766"
 
       def install
         bin.install "vssh"
@@ -29,25 +29,25 @@ class VaultSshPlus < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.3/vault-ssh-plus_0.5.3_linux_arm.zip"
+      sha256 "b60742ef43e402a3725841c456f0446151b0da78d279428adbc25621dc1a31e2"
+
+      def install
+        bin.install "vssh"
+      end
+    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.2/vault-ssh-plus_0.5.2_linux_arm64.zip"
-      sha256 "524b6f401c44ccf0942b7d61d1d60bfaa108fe1bc688b5c275318283bdb2556e"
+      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.3/vault-ssh-plus_0.5.3_linux_arm64.zip"
+      sha256 "0cd3a9bd044cdaa24cc90d94fcd64c0c7ef383aa42c3e2476cc2dbc618fe5b7d"
 
       def install
         bin.install "vssh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.2/vault-ssh-plus_0.5.2_linux_amd64.zip"
-      sha256 "027a4552efccc0b70ed0b4cadf1b7ab728571af2c0898c2484266c3819c96a85"
-
-      def install
-        bin.install "vssh"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.2/vault-ssh-plus_0.5.2_linux_arm.zip"
-      sha256 "e121195e2b6ca9768c1cd82c0e472f1be6fa4ecc40c42066c6ab532cc1fb8b8d"
+      url "https://github.com/isometry/vault-ssh-plus/releases/download/v0.5.3/vault-ssh-plus_0.5.3_linux_amd64.zip"
+      sha256 "356cb24e4a5502a7896131365b4762fa7fca1352da5e7cdf05c12a296697c75e"
 
       def install
         bin.install "vssh"
