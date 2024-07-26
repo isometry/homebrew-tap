@@ -5,12 +5,12 @@
 class PlatformHealth < Formula
   desc "Platform health monitoring system"
   homepage "https://just.breathe.io/project/platform-health/"
-  version "0.4.4"
+  version "0.4.5"
 
   on_macos do
     on_intel do
-      url "https://github.com/isometry/platform-health/releases/download/v0.4.4/platform-health_0.4.4_darwin_amd64.zip"
-      sha256 "18133fd29f3e33c39b6e1e43be86cd793e380da05174aeda087816b3f5e76498"
+      url "https://github.com/isometry/platform-health/releases/download/v0.4.5/platform-health_0.4.5_darwin_amd64.zip"
+      sha256 "a56aebda079015b2246fc8585c46a316cd32ad5f1f2b58979d4da9c3dd09332b"
 
       def install
         bin.install "phc"
@@ -18,8 +18,8 @@ class PlatformHealth < Formula
       end
     end
     on_arm do
-      url "https://github.com/isometry/platform-health/releases/download/v0.4.4/platform-health_0.4.4_darwin_arm64.zip"
-      sha256 "0afea9a7e0769507bf7aff31de0557f517c89a7d850496d126738d953173f4fc"
+      url "https://github.com/isometry/platform-health/releases/download/v0.4.5/platform-health_0.4.5_darwin_arm64.zip"
+      sha256 "8b75d5cd786774cf4d26b94aa544c728bb2e8e3664bd1322f21f19616154e373"
 
       def install
         bin.install "phc"
@@ -31,8 +31,8 @@ class PlatformHealth < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/isometry/platform-health/releases/download/v0.4.4/platform-health_0.4.4_linux_amd64.zip"
-        sha256 "763681bdac2a4f8898476421a02aff68456c63c2d282392b3209d14fd4f6457d"
+        url "https://github.com/isometry/platform-health/releases/download/v0.4.5/platform-health_0.4.5_linux_amd64.zip"
+        sha256 "38fb51597c53c1bd5182598082f03efe25180faf53643781fe5eba36ac5a78ec"
 
         def install
           bin.install "phc"
@@ -42,8 +42,8 @@ class PlatformHealth < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/isometry/platform-health/releases/download/v0.4.4/platform-health_0.4.4_linux_arm64.zip"
-        sha256 "91cdfa1e0a84ba558c3d243ab0b297ecfb525430b3b0852fb6d35ad82a5e1779"
+        url "https://github.com/isometry/platform-health/releases/download/v0.4.5/platform-health_0.4.5_linux_arm64.zip"
+        sha256 "69a105791a64f6aecc83a5e6f563653b3eb2a0c1d7193360569492b8dea9353c"
 
         def install
           bin.install "phc"
