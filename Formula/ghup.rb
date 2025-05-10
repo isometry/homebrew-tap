@@ -5,20 +5,20 @@
 class Ghup < Formula
   desc "A GitHub API client for managing tags and repository content from third-party automation systems"
   homepage "https://just.breathe.io/project/ghup/"
-  version "0.13.1"
+  version "0.13.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.1/ghup_0.13.1_darwin_amd64.zip"
-      sha256 "a3bb879013d2f4930e22092a4d64eeec5963d4892e263a3b9eea0809755abd4f"
+      url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.2/ghup_0.13.2_darwin_amd64.zip"
+      sha256 "36c2e2d5cc551e507fd94738be51e277f9385bd99a10428cdc6a31bb29e5f0c5"
 
       def install
         bin.install "ghup"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.1/ghup_0.13.1_darwin_arm64.zip"
-      sha256 "2a6146e06f4b6101b4a5fd1674aa943621942a0043b8d055764a56c879ee4b18"
+      url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.2/ghup_0.13.2_darwin_arm64.zip"
+      sha256 "d81dcce2cc4cbbec7d57769e445ecdc93a9a61b5c17a48751789ebc70f982887"
 
       def install
         bin.install "ghup"
@@ -27,34 +27,25 @@ class Ghup < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.1/ghup_0.13.1_linux_amd64.zip"
-        sha256 "4e908a8fea859eb3d1a53eb3846c55341449ef64e3104afac48bcaebc1b56907"
-
-        def install
-          bin.install "ghup"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.2/ghup_0.13.2_linux_amd64.zip"
+      sha256 "751c8e3a7e4412587f04373e110e7b048177a3461619050ef8542a1859c5d764"
+      def install
+        bin.install "ghup"
       end
     end
-    if Hardware::CPU.arm?
-      if !Hardware::CPU.is_64_bit?
-        url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.1/ghup_0.13.1_linux_arm.zip"
-        sha256 "5004c371e7ca01206cdc48078d15b13d3a2ff22878fbfdf4ef129ab05a4544f6"
-
-        def install
-          bin.install "ghup"
-        end
+    if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
+      url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.2/ghup_0.13.2_linux_arm.zip"
+      sha256 "f938fa9143a64be5ae47659b97d499544f19249104c530499d86b6c7cecfc169"
+      def install
+        bin.install "ghup"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.1/ghup_0.13.1_linux_arm64.zip"
-        sha256 "59c12b5a30471d26871b6fa3d47759969bbc14d1f19d812c3cb64b6c7be4f933"
-
-        def install
-          bin.install "ghup"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/nexthink-oss/ghup/releases/download/v0.13.2/ghup_0.13.2_linux_arm64.zip"
+      sha256 "34d92e9be332d35e430ec7b969e22eb87e11a651f90a11a32bec54e6066929d3"
+      def install
+        bin.install "ghup"
       end
     end
   end
