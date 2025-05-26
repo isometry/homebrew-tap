@@ -5,20 +5,20 @@
 class DockerCredentialEnv < Formula
   desc "Environment-driven Docker credential helper"
   homepage "https://just.breathe.io/project/docker-credential-env/"
-  version "1.4.0"
+  version "1.4.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.0/docker-credential-env_1.4.0_darwin_amd64.zip"
-      sha256 "e94a25b19adb3b6c0155166f82cf5c3ba71a014add8a76e160a231192189ade8"
+      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.1/docker-credential-env_1.4.1_darwin_amd64.zip"
+      sha256 "d4439c24efc169c874ac3185ccc3756d450ef9b432b4653cfcde4df7db853bf9"
 
       def install
         bin.install "docker-credential-env"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.0/docker-credential-env_1.4.0_darwin_arm64.zip"
-      sha256 "88d2bcbacf70230cda01dae90df70b9d0d512277cce968b822d85edff0be7ad3"
+      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.1/docker-credential-env_1.4.1_darwin_arm64.zip"
+      sha256 "881596b0730f43273aa40124fdd3f6d1935bfa9b5ffc71bed721809e2f2235c7"
 
       def install
         bin.install "docker-credential-env"
@@ -28,22 +28,22 @@ class DockerCredentialEnv < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.0/docker-credential-env_1.4.0_linux_amd64.zip"
-      sha256 "1ac8939b5b6f01f5af3c8daec012ca37e2bcffc14320416ebb5ede691c951857"
+      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.1/docker-credential-env_1.4.1_linux_amd64.zip"
+      sha256 "d1f9c69debf7e2ea9c103ff97d06a102459865ba9c4cb8e2d5bd75257b9271b9"
       def install
         bin.install "docker-credential-env"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.0/docker-credential-env_1.4.0_linux_arm.zip"
-      sha256 "3de5ccecb688abfcfab27b5e824144f452efbf2756babe042dc24bd67b29faf5"
+      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.1/docker-credential-env_1.4.1_linux_arm.zip"
+      sha256 "821906a14817b8b9d328e7154eb2bf8ed58843523c379ca0ab4c0e1d83a6e634"
       def install
         bin.install "docker-credential-env"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.0/docker-credential-env_1.4.0_linux_arm64.zip"
-      sha256 "0e5d0bee816b7bc1d93bacfeb187ec4d571378d6b2b159c85cf43a0f46c4572b"
+      url "https://github.com/isometry/docker-credential-env/releases/download/v1.4.1/docker-credential-env_1.4.1_linux_arm64.zip"
+      sha256 "33dee755b9e9ced11f86ad633ce676a7d7cb9ed7e50f1db2d7a2517a6d4fb00d"
       def install
         bin.install "docker-credential-env"
       end
