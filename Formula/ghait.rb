@@ -5,20 +5,20 @@
 class Ghait < Formula
   desc "Easily generate GitHub App Installation Tokens"
   homepage "https://just.breathe.io/project/ghait/"
-  version "0.4.3"
+  version "0.4.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/ghait/releases/download/v0.4.3/ghait_0.4.3_darwin_amd64.zip"
-      sha256 "1e72fb32d6ab1e7e9ccec7e6d79a0d9e79afc1093bed1c75b786abf213c70b58"
+      url "https://github.com/isometry/ghait/releases/download/v0.4.4/ghait_0.4.4_darwin_amd64.zip"
+      sha256 "277af70744024f94af30d40bfab8ad8b03b397a261f323c82f834daa93a27b73"
 
       def install
         bin.install "ghait"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isometry/ghait/releases/download/v0.4.3/ghait_0.4.3_darwin_arm64.zip"
-      sha256 "a329bcb833f15be1eb36a93ac32ab6c2cbf2885f8810ecab9df0eee37e7222e2"
+      url "https://github.com/isometry/ghait/releases/download/v0.4.4/ghait_0.4.4_darwin_arm64.zip"
+      sha256 "a538184b38b0ed8ad72c77fe1574cda7de16550efeb5e32055683087768fe082"
 
       def install
         bin.install "ghait"
@@ -27,24 +27,18 @@ class Ghait < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/isometry/ghait/releases/download/v0.4.3/ghait_0.4.3_linux_amd64.zip"
-        sha256 "6173fe3d8a215f6fddba7a4f799d55f580c83a9de03132c0220c25561f449762"
-
-        def install
-          bin.install "ghait"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/isometry/ghait/releases/download/v0.4.4/ghait_0.4.4_linux_amd64.zip"
+      sha256 "041e9691f598358d981a6944e22decb7c0d49d11f7c966bf6e8a5224c00904c2"
+      def install
+        bin.install "ghait"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/isometry/ghait/releases/download/v0.4.3/ghait_0.4.3_linux_arm64.zip"
-        sha256 "731a8dfb887922e8b872959d3fb55638ef0e7163157b90fa23e387173f8da291"
-
-        def install
-          bin.install "ghait"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/isometry/ghait/releases/download/v0.4.4/ghait_0.4.4_linux_arm64.zip"
+      sha256 "f32757afdaf6fa839b0ca03f325b83e929be04a6cbd4a1f119cc2735f36d2807"
+      def install
+        bin.install "ghait"
       end
     end
   end
