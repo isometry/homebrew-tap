@@ -5,20 +5,20 @@
 class GiteaMirror < Formula
   desc "Manage Gitea mirror lifecycle"
   homepage "https://just.breathe.io/project/gitea-mirror/"
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nexthink-oss/gitea-mirror/releases/download/v0.6.0/gitea-mirror_0.6.0_darwin_amd64.zip"
-      sha256 "fde94bce8ecc80a5111d2baaeab237b84dd25d025d9c65eb64e3cf32c81db346"
+      url "https://github.com/nexthink-oss/gitea-mirror/releases/download/v0.6.1/gitea-mirror_0.6.1_darwin_amd64.zip"
+      sha256 "585cb10559dfa763a728ef37ad5e73d2d9186fc546c9aa056073c2a0ede552a3"
 
       def install
         bin.install "gitea-mirror"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nexthink-oss/gitea-mirror/releases/download/v0.6.0/gitea-mirror_0.6.0_darwin_arm64.zip"
-      sha256 "3328489f6fb2a25956faaedb4c915d6998969c6030217dcdf84a323b575c5bbb"
+      url "https://github.com/nexthink-oss/gitea-mirror/releases/download/v0.6.1/gitea-mirror_0.6.1_darwin_arm64.zip"
+      sha256 "d41e47d6bf6fd65378199415cddccb7a60d88e61cae94fee936c131cefcd1e24"
 
       def install
         bin.install "gitea-mirror"
@@ -28,15 +28,15 @@ class GiteaMirror < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nexthink-oss/gitea-mirror/releases/download/v0.6.0/gitea-mirror_0.6.0_linux_amd64.zip"
-      sha256 "0b1dbd365d553b0e7c2e057c35bbe6d5b91d4ef6b159c119dd115d8ed1443ce2"
+      url "https://github.com/nexthink-oss/gitea-mirror/releases/download/v0.6.1/gitea-mirror_0.6.1_linux_amd64.zip"
+      sha256 "186f9ab00b2a326ba1f0605c09de3acf8bc6bcd7a838e0428d747b6c09556f1c"
       def install
         bin.install "gitea-mirror"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nexthink-oss/gitea-mirror/releases/download/v0.6.0/gitea-mirror_0.6.0_linux_arm64.zip"
-      sha256 "c1a0bf1b7ab4dc5eaca9199ffa99436d31bab794e8950c500902e20324ab282a"
+      url "https://github.com/nexthink-oss/gitea-mirror/releases/download/v0.6.1/gitea-mirror_0.6.1_linux_arm64.zip"
+      sha256 "07c74860740fc474b42df680a1536cc08060fcbea8fc1c3f71779590da582a5f"
       def install
         bin.install "gitea-mirror"
       end
