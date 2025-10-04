@@ -5,20 +5,20 @@
 class Ghait < Formula
   desc "Easily generate GitHub App Installation Tokens"
   homepage "https://just.breathe.io/project/ghait/"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/ghait/releases/download/v0.6.0/ghait_0.6.0_darwin_amd64.zip"
-      sha256 "dd2c9f4eece8b5bc0e8f1218af2906b005a146a05529a65d2b6d40159763840d"
+      url "https://github.com/isometry/ghait/releases/download/v0.7.0/ghait_0.7.0_darwin_amd64.zip"
+      sha256 "164fba2f6fb9aee79bceb2617e49de3e0ec7e57810e11efafecf83d6c4f040f2"
 
       def install
         bin.install "ghait"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isometry/ghait/releases/download/v0.6.0/ghait_0.6.0_darwin_arm64.zip"
-      sha256 "96a462802a2db3dd2e69326a4075722e31079e38cbe206117759a67753159ff5"
+      url "https://github.com/isometry/ghait/releases/download/v0.7.0/ghait_0.7.0_darwin_arm64.zip"
+      sha256 "47d1e3b72ec538bcb6ccfe9e8ba61ee66012eece7a583a1c1082838b9dd040a2"
 
       def install
         bin.install "ghait"
@@ -27,16 +27,16 @@ class Ghait < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/ghait/releases/download/v0.6.0/ghait_0.6.0_linux_amd64.zip"
-      sha256 "9b4424fbfc57cc28088cab35bcccaba3a425c65f331dd65062762cf611f3263b"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/isometry/ghait/releases/download/v0.7.0/ghait_0.7.0_linux_amd64.zip"
+      sha256 "335c1c5b55024e2fd67b8176c356bd807a5eeb2633b760fa676e48ef14750491"
       def install
         bin.install "ghait"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/ghait/releases/download/v0.6.0/ghait_0.6.0_linux_arm64.zip"
-      sha256 "68eaf008bad499b073631c307c7731d37bb543cf8c15a1abaf1726422809ff90"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/isometry/ghait/releases/download/v0.7.0/ghait_0.7.0_linux_arm64.zip"
+      sha256 "3f782aef4eeb9b30d9a6311a278b78102fd5ed74bc8a6da9349b0467afa94ed9"
       def install
         bin.install "ghait"
       end
