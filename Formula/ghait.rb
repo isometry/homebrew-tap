@@ -5,20 +5,20 @@
 class Ghait < Formula
   desc "Easily generate GitHub App Installation Tokens"
   homepage "https://just.breathe.io/project/ghait/"
-  version "0.10.0"
+  version "0.11.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/ghait/releases/download/v0.10.0/ghait_0.10.0_darwin_amd64.zip"
-      sha256 "829b5777a9e5c34f4f2fcacc579f400746cb5c271d8081cd7a3e707dc30b5c31"
+      url "https://github.com/isometry/ghait/releases/download/v0.11.0/ghait_0.11.0_darwin_amd64.zip"
+      sha256 "08540c130eb1c723243e656a9ef0bd2a917fd545d59fb4c407836f1de4cc1526"
 
       def install
         bin.install "ghait"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isometry/ghait/releases/download/v0.10.0/ghait_0.10.0_darwin_arm64.zip"
-      sha256 "c0c03d35ad3d7547b6887b98febb3441a571843760525b3aa3fa9563f689d72a"
+      url "https://github.com/isometry/ghait/releases/download/v0.11.0/ghait_0.11.0_darwin_arm64.zip"
+      sha256 "595dc9791cf8f0c9193b69662df3d27493c28a5e5c9ad777584d365a93b32033"
 
       def install
         bin.install "ghait"
@@ -28,15 +28,15 @@ class Ghait < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/ghait/releases/download/v0.10.0/ghait_0.10.0_linux_amd64.zip"
-      sha256 "aafc382dda9359b3d125c4be242353aaa177beabfb4fe06692f2aae15dde545e"
+      url "https://github.com/isometry/ghait/releases/download/v0.11.0/ghait_0.11.0_linux_amd64.zip"
+      sha256 "9089986db7db8a8a722b64eda270374e8fa23d3c86f95ebf9b12bf377e3f7457"
       def install
         bin.install "ghait"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/ghait/releases/download/v0.10.0/ghait_0.10.0_linux_arm64.zip"
-      sha256 "772b5873d201a4278344bb9ebd4a5875861d1a151ea733a0cb325cf785168e02"
+      url "https://github.com/isometry/ghait/releases/download/v0.11.0/ghait_0.11.0_linux_arm64.zip"
+      sha256 "6ef0b86e268b125dac3123bb4ca29be2aebecd7d05afab84004f1761411fd1e3"
       def install
         bin.install "ghait"
       end
