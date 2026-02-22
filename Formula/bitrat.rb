@@ -5,22 +5,22 @@
 class Bitrat < Formula
   desc "Lightning-fast, multi-algorithm file checksums"
   homepage "https://just.breathe.io/project/bitrat/"
-  version "0.1.2"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/bitrat/releases/download/v0.1.2/bitrat_0.1.2_darwin_amd64.zip"
-      sha256 "cffc761343db6d3b0027bfc0a2e01d6c1b485b34d386ed3b8d613118e062b847"
+      url "https://github.com/isometry/bitrat/releases/download/v0.2.0/bitrat_0.2.0_darwin_amd64.zip"
+      sha256 "c3047c490923fe7365e80ce981d1d7cdd1d59e4cea7c7c4e5bf304a6c30c6a25"
 
-      def install
+      define_method(:install) do
         bin.install "bitrat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isometry/bitrat/releases/download/v0.1.2/bitrat_0.1.2_darwin_arm64.zip"
-      sha256 "81fa2566d4b094253ecb706c758215b7c077f78778e78805d03b822704f6eed8"
+      url "https://github.com/isometry/bitrat/releases/download/v0.2.0/bitrat_0.2.0_darwin_arm64.zip"
+      sha256 "f282136e2f92d52e81accf9c3c8acd036c31a174b4c66db9761d52e690a43fdd"
 
-      def install
+      define_method(:install) do
         bin.install "bitrat"
       end
     end
@@ -28,16 +28,16 @@ class Bitrat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/bitrat/releases/download/v0.1.2/bitrat_0.1.2_linux_amd64.zip"
-      sha256 "bc57ce3cffcd0c6f560f1ae30b30bbdc5c9fb8ace132da89c7a95d2a7e26739e"
-      def install
+      url "https://github.com/isometry/bitrat/releases/download/v0.2.0/bitrat_0.2.0_linux_amd64.zip"
+      sha256 "3093b6b5a61248b326400b2326f37681f56e51ebb46454243c8d8c0eee86d08d"
+      define_method(:install) do
         bin.install "bitrat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/bitrat/releases/download/v0.1.2/bitrat_0.1.2_linux_arm64.zip"
-      sha256 "a0aef8584519a400cf8abdfb508e26f248ea0f81bccfa0896af507dc83000597"
-      def install
+      url "https://github.com/isometry/bitrat/releases/download/v0.2.0/bitrat_0.2.0_linux_arm64.zip"
+      sha256 "1217efa75e0dd63e877656475a4c6aedb44ebc84ad5630149d807256399e6d92"
+      define_method(:install) do
         bin.install "bitrat"
       end
     end
