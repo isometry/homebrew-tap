@@ -5,20 +5,20 @@
 class Bitrat < Formula
   desc "Lightning-fast, multi-algorithm file checksums"
   homepage "https://just.breathe.io/project/bitrat/"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/bitrat/releases/download/v0.2.0/bitrat_0.2.0_darwin_amd64.zip"
-      sha256 "c3047c490923fe7365e80ce981d1d7cdd1d59e4cea7c7c4e5bf304a6c30c6a25"
+      url "https://github.com/isometry/bitrat/releases/download/v0.2.1/bitrat_0.2.1_darwin_amd64.zip"
+      sha256 "146e8729b97a7db051a4f5da770c935fc4eecdb4082b8c80bcae50dc5f4c4a4a"
 
       define_method(:install) do
         bin.install "bitrat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isometry/bitrat/releases/download/v0.2.0/bitrat_0.2.0_darwin_arm64.zip"
-      sha256 "f282136e2f92d52e81accf9c3c8acd036c31a174b4c66db9761d52e690a43fdd"
+      url "https://github.com/isometry/bitrat/releases/download/v0.2.1/bitrat_0.2.1_darwin_arm64.zip"
+      sha256 "8a4a5081a0b098dec3c53f49e45fe48ee3c3a1c9b66af4f297c13f7ac91b72c1"
 
       define_method(:install) do
         bin.install "bitrat"
@@ -28,15 +28,15 @@ class Bitrat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/bitrat/releases/download/v0.2.0/bitrat_0.2.0_linux_amd64.zip"
-      sha256 "3093b6b5a61248b326400b2326f37681f56e51ebb46454243c8d8c0eee86d08d"
+      url "https://github.com/isometry/bitrat/releases/download/v0.2.1/bitrat_0.2.1_linux_amd64.zip"
+      sha256 "2183306742c08c586b495965c306020fa10233ddcd6cd117f3c4fef8aa5e090c"
       define_method(:install) do
         bin.install "bitrat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/bitrat/releases/download/v0.2.0/bitrat_0.2.0_linux_arm64.zip"
-      sha256 "1217efa75e0dd63e877656475a4c6aedb44ebc84ad5630149d807256399e6d92"
+      url "https://github.com/isometry/bitrat/releases/download/v0.2.1/bitrat_0.2.1_linux_arm64.zip"
+      sha256 "e39db23a599de0e4a73d4aa768ec0f27ce8000484709dc35c366a00f3e68c190"
       define_method(:install) do
         bin.install "bitrat"
       end
