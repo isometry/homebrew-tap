@@ -5,20 +5,20 @@
 class Ghait < Formula
   desc "Easily generate GitHub App Installation Tokens"
   homepage "https://just.breathe.io/project/ghait/"
-  version "0.12.0"
+  version "84.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/ghait/releases/download/v0.12.0/ghait_0.12.0_darwin_amd64.zip"
-      sha256 "9965efc29e3ede81a0bde092f5024f82876afdcf9b160cd29945ba06ef1454da"
+      url "https://github.com/isometry/ghait/releases/download/v84.1.0/ghait_84.1.0_darwin_amd64.zip"
+      sha256 "d2dd89d9ffd66547c015cd622bb4391473a6dcd6f78dcb4437355ad2181eef2f"
 
       define_method(:install) do
         bin.install "ghait"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isometry/ghait/releases/download/v0.12.0/ghait_0.12.0_darwin_arm64.zip"
-      sha256 "c52bd305e3025711872c644de85f1e84e8a968969ee45875c1a7e9e015d3b87f"
+      url "https://github.com/isometry/ghait/releases/download/v84.1.0/ghait_84.1.0_darwin_arm64.zip"
+      sha256 "fc810b86d46456fc44de3927ba9bceff0b13a6962755f297a343afbc32c3a85e"
 
       define_method(:install) do
         bin.install "ghait"
@@ -28,15 +28,15 @@ class Ghait < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/ghait/releases/download/v0.12.0/ghait_0.12.0_linux_amd64.zip"
-      sha256 "641e0e2eca004cf90c75acf3c92a612ead5f2f6a6b9a33c03dd227f8f68a0017"
+      url "https://github.com/isometry/ghait/releases/download/v84.1.0/ghait_84.1.0_linux_amd64.zip"
+      sha256 "aa61661166d44f29c5635965971495eb1c9ff7ae91e14b9404eb5756d85239d2"
       define_method(:install) do
         bin.install "ghait"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/ghait/releases/download/v0.12.0/ghait_0.12.0_linux_arm64.zip"
-      sha256 "d2a57d2773121ff0adf7b0896998269c5c1a79d3742d4ccbaf1f599bbb260eb1"
+      url "https://github.com/isometry/ghait/releases/download/v84.1.0/ghait_84.1.0_linux_arm64.zip"
+      sha256 "9277644bd35dd86138a64192935f6e9ddf5603a9577d95e767a737776d2cc5f2"
       define_method(:install) do
         bin.install "ghait"
       end
