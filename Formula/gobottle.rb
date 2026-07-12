@@ -1,16 +1,16 @@
 class Gobottle < Formula
   desc "Build and publish Homebrew bottles for Go projects"
   homepage "https://github.com/isometry/gobottle"
-  url "https://github.com/isometry/gobottle/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "ff598286faf62f7fecf18dffaaeca1cc0a119d1b8b030a9572f43b680de37964"
+  url "https://github.com/isometry/gobottle/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "02cf62453c87487bdf9616d2a549fc63e2058ee8ac329ea063f21b6cf4825eb8"
   license "MIT"
 
   bottle do
     root_url "https://ghcr.io/v2/isometry/tap"
-    sha256 cellar: :any_skip_relocation, monterey: "da3cb1d0081afa4dc3b74f5cc942d0b4968b6eb15cde5555944601de60df834a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "96488ee6f8496bf8a4861eceda64870ff6f6a30c6d9a09c0e9eb07c41ef31a91"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ca8ec02283c70c45879d42b6f1b49e4d27e72ab14d9be040572bbb6dbc31c0d1"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e9b3b02ae9202e45d63175d1d89668a303feb3214db2cfe3e6a6e8459a44469a"
+    sha256 cellar: :any_skip_relocation, monterey: "2aad6f9de8f1d80ba72ca5474e19a407080f9e0f3a0ef28fde19759ef60226f7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "858354cb16b60958e7171d3b66809a9c1412d9d5c1bd8736566606199514bda3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "106677d14dd7e8c4719df248e34ad2d46653149bc6e5575f057db2a65bdad3c0"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "83f92ddadc5610c210f14eb2f016ee37b25189dbcd424a29ace55d1f96d2ed8a"
   end
 
   def install
