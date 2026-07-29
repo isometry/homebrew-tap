@@ -5,12 +5,12 @@
 class PlatformHealth < Formula
   desc "Platform health monitoring system"
   homepage "https://just.breathe.io/project/platform-health/"
-  version "0.9.4"
+  version "0.9.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isometry/platform-health/releases/download/v0.9.4/platform-health_0.9.4_darwin_amd64.zip"
-      sha256 "8819b8e39095d0ad150cc9416a470cdd06f84098d156a519dbf28f742bf77799"
+      url "https://github.com/isometry/platform-health/releases/download/v0.9.5/platform-health_0.9.5_darwin_amd64.zip"
+      sha256 "50b886a437c8e56f4a011a726d246259f74b569e02dd85e056ef487882aea50b"
 
       define_method(:install) do
         bin.install "ph"
@@ -19,8 +19,8 @@ class PlatformHealth < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isometry/platform-health/releases/download/v0.9.4/platform-health_0.9.4_darwin_arm64.zip"
-      sha256 "328653f0d1f1f9fc9696c9885a232cefec47ab0dea6606be1cc026265505af07"
+      url "https://github.com/isometry/platform-health/releases/download/v0.9.5/platform-health_0.9.5_darwin_arm64.zip"
+      sha256 "9b586acc995b3feae8aea7cbf1524c0df19b9664767de82eb13882944d829ffa"
 
       define_method(:install) do
         bin.install "ph"
@@ -32,8 +32,8 @@ class PlatformHealth < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/platform-health/releases/download/v0.9.4/platform-health_0.9.4_linux_amd64.zip"
-      sha256 "62dbb2af95b95d0bf64799ff383855ef8d1dc3813071a03e041b91bf81b2481e"
+      url "https://github.com/isometry/platform-health/releases/download/v0.9.5/platform-health_0.9.5_linux_amd64.zip"
+      sha256 "ed97c6e274f3d98d7a021d03d477ddf0ad1c540bedb8343d15961d707b7957be"
       define_method(:install) do
         bin.install "ph"
         bin.install "phc"
@@ -41,8 +41,8 @@ class PlatformHealth < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isometry/platform-health/releases/download/v0.9.4/platform-health_0.9.4_linux_arm64.zip"
-      sha256 "36bfd88e7b33694f60e51f2887a53e6350af083576d6ebb5c20e838a862411f9"
+      url "https://github.com/isometry/platform-health/releases/download/v0.9.5/platform-health_0.9.5_linux_arm64.zip"
+      sha256 "6e61fe1ca6cc07769b905235566fc776d37b5dad1afc84312599ae282558b70e"
       define_method(:install) do
         bin.install "ph"
         bin.install "phc"
