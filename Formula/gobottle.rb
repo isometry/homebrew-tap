@@ -1,20 +1,30 @@
 class Gobottle < Formula
   desc "Build and publish Homebrew bottles for Go projects"
   homepage "https://github.com/isometry/gobottle"
-  url "https://github.com/isometry/gobottle/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "fc1f123e901683d20bb874d2454aedf39eeee3e2ae0b09f113d2d8163f602809"
+  url "https://github.com/isometry/gobottle/archive/refs/tags/v0.8.3.tar.gz"
+  sha256 "e171cc93b69b9bb810c2294917284ecb4fc8b8ae708e1195124511251857edcc"
   license "MIT"
+  head "https://github.com/isometry/gobottle.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/isometry/tap"
-    sha256 cellar: :any_skip_relocation, monterey: "e013c1fd53524f751c5b9ad36f8740678285948d840a6ca77e0ebad9c8e53644"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a3d996982ddfe57bcc4da24afb8af097e6c158316a59f999226d64ef677bc1fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "331352d70141edad2e87c41489cb2d5c8a8dd1aa864f159c164db4b564798052"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "7fc770ceae8ec65ae58d120b3132343d2b051a6552f544185a0d71297c747faf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6a5ebf7787f471827898957efd510e7268d09b0ab9cce3af2dbf3a8eb2f85eac"
+    sha256 cellar: :any_skip_relocation, monterey:       "5423b6cb579b7439445f78b1c20c435c64e57c3ccf966dc3889c45029cdc7cbc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:    "9e0fb8e800f7597e983dde4c0f0e2e8138b34032cb0d041f822837ad31aff4e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d38e46091bcf705136a7b6ed925cbf17da3ada80c8d58ac58851dec2784d8115"
   end
 
+  depends_on "go" => :build
+
   def install
-    bin.install "gobottle"
+    ENV["CGO_ENABLED"] = "0"
+    commit = build.head? ? Utils.git_head(buildpath, safe: false) : "12bc4c9a04232aa26c6298eada76c2ee21aed846"
+    ldflags = %W[
+      -X github.com/isometry/gobottle/cmd.Version=#{version}
+      -X github.com/isometry/gobottle/cmd.Commit=#{commit}
+      -X github.com/isometry/gobottle/cmd.Date=#{time.iso8601}
+    ]
+    system "go", "build", *std_go_args(ldflags: ldflags), "."
     generate_completions_from_executable(bin/"gobottle", "completion")
   end
 
