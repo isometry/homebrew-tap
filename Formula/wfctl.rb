@@ -1,17 +1,17 @@
 class Wfctl < Formula
   desc "Inspect and operate a Wavefront progressive-delivery fleet"
   homepage "https://github.com/isometry/wavefront-controller"
-  url "https://github.com/isometry/wavefront-controller/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "4ffa2c76b259b8ba5dcb07ad5399e3477e12d465dcb8f0e7ad27055e4d01bb62"
+  url "https://github.com/isometry/wavefront-controller/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "711a671cda43628e8522887ab6e4deb34e25e21946ba51dee7cfdb2783259ac2"
   license "Apache-2.0"
   head "https://github.com/isometry/wavefront-controller.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/isometry/tap"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "341e33a9494661579904d1005ccc4dbe7883302f671a22f9f4ab15f190726dbd"
-    sha256 cellar: :any_skip_relocation, monterey:       "fd9590102e644a9f9e4e740d131ffa574e0e029e8dfaa37ca307051a0668b1cc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "b775efb04c4fe7ec35d9262cf9d1f97bab0aeaba0eac7c7f2ecb9ee743d79707"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eecc55140450b7c2b67fdea9fa8f6c62c1e88e059a8c97cc5eb199fbf248ee9f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c251655d21692071fe487b5ac42621689103ea0fdc3a98ba2441be47c4d75f0"
+    sha256 cellar: :any_skip_relocation, monterey:       "130af815dbeb75651395d3b028cbec3cdc328f180d29b5c131f27fa5800c0296"
+    sha256 cellar: :any_skip_relocation, arm64_linux:    "86eedb32514c2a659b56de9df9cc1ece99962e4eaae528725e8f2eb4a82cf19a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f49d4a6225e4b87cde85a51e5cbc3dcd6cfe2a3776aa2ff240a2cd2f3fae33e4"
   end
 
   depends_on "go" => :build
