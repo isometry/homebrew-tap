@@ -1,17 +1,17 @@
 class Choam < Formula
   desc "Track updates for melange build specification files"
   homepage "https://just.breathe.io/project/choam/"
-  url "https://github.com/isometry/choam/archive/refs/tags/v0.5.2.tar.gz"
-  sha256 "edb1a1839895578ad0326fb0d839a6daea9dc328292cd5c9d43f345bee9572c0"
+  url "https://github.com/isometry/choam/archive/refs/tags/v0.5.3.tar.gz"
+  sha256 "ace31a4d551f481875448b05bdb0b6b0df4006b459b3a604cbb6d0353aaaef5b"
   license "MIT"
   head "https://github.com/isometry/choam.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/isometry/tap"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5ed3ee67f9fa50d8f20895e5f3d44965159c120b587ba2d5fd673e7d21e1f74e"
-    sha256 cellar: :any_skip_relocation, monterey:       "326c657ee6b8b20113d1abd15b39b55719820bf30331f51260bd38f3536859f1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "3d36a3913a8daa83a7e3724245516d214155b710f4a0aa05f2649fa03760bcb3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd541cc8d927503220285f7fc150c41311f6e8d087ef5f21ec21ab6afb513be9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5ddc34c9cdf7c8404b8cd536181b0d13591eff0ae78b7412a4ceac6f57fc394f"
+    sha256 cellar: :any_skip_relocation, monterey:       "6065d83ef71bb90f77ea619a39864d61097f33ca09e59ba492c1f191c7c1a477"
+    sha256 cellar: :any_skip_relocation, arm64_linux:    "632e1b7e1e5d2d8f493a3942a9d386f0fd50509b118fd098f09a93430f22fdb6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3bd49e7d5288e9211e1e6b4cba0c6fb72113d296c1e9131795cd9fd772f022c3"
   end
 
   depends_on "go" => :build
